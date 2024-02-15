@@ -12,7 +12,7 @@ print("3 - SHA256")
 print("4 - SHA512")
 
 number = int(input(""))
-
+salt = 'iproute'
 try:
 
     if number == 1:
@@ -26,11 +26,11 @@ try:
     if number == 3:
         print("Вы выбрали алгоритм SHA256")
         c = input("Введите данные для шифрования алгоритмом SHA256:")
-        hashGenSHA256.HashGenSHA256(c)
+        hashGenSHA256.HashGenSHA256(salt, c)
     if number == 4:
         print("Вы выбрали алгоритм SHA512")
         d = input("Введите данные для шифрования алгоритмом SHA256:")
-        hashGenSHA512.HashGenSHA512(d)
+        hashGenSHA512.HashGenSHA512(salt, d)
 except:
     if number > 4:
         print("Выберите правильный вариант.")
