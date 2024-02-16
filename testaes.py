@@ -23,7 +23,7 @@ def decrypt(ciphertext, key):
 plaintext = b"This is the message to be encrypted"
 # Generate a random 256-bit (32-byte) key
 # Key-length accepted: 16, 24, and 32 bytes.
-key = get_random_bytes(32)  # Generating keys/passphrase
+key = b"3\x7f\xae\x11\x10\x81\xc2d\xdbo\xf7fM\xcch\xcb\xec\xed4\xda\x06\x88u\xc3\xaa'@F^\x8d\x11\xd4" # get_random_bytes(32)  # или генерируем рандомно keys/passphrase
 print("Key:", key.hex())
 # Encryption
 encrypted_data = encrypt(plaintext, key)
